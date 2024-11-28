@@ -300,6 +300,9 @@ body{
 	background:#fff;
 	z-index:999;
 	width:100%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 .get-quote{
 	margin-top:12px;
@@ -310,6 +313,8 @@ body{
 .header .logo {
 	float: left;
 	margin-top: 18px;
+	width: 40%;
+	height: auto;
 }
 .header .navbar {
 	background: none;
@@ -1010,7 +1015,7 @@ body{
 .why-choose .choose-right{
 	height:100%;
 	width:100%;
-	background-image:url('img/video-bg.jpg');
+	background-image:url('img/Videoimg.png');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
