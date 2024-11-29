@@ -93,7 +93,7 @@
 	padding: 10px 18px;
 	font-size: 12px;
 }
-.header.style2 .single-widget.button {
+.header.style2 .single-widget .button {
 	margin:0;
 	padding:0;
 }
@@ -477,14 +477,15 @@
 }
 .slicknav_menu .slicknav_icon-bar {
 	display: block;
-	width: 25px;
-	height: 3px;
+	width: 30px;
+	height: 4px;
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	border-radius: 1px;
 	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.25);
 	-moz-box-shadow: 0 1px 0 rgba(0,0,0,.25);
 	box-shadow: 0 1px 0 rgba(0,0,0,.25);
+	margin-top:35px;
 }
 .header .main-menu{
 	display:none 
@@ -657,6 +658,10 @@
 }
 .fun-facts .single-fun .content {
 	padding:0;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
 }
 .why-choose .choose-right {
 	height: 350px;

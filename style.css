@@ -1,10 +1,4 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
-========================================*/   
+ 
 /*======================================
 [ CSS Table of contents ]
 * Global CSS
@@ -277,6 +271,7 @@ body{
 }
 .header .top-contact{
 	float:right;
+	
 }
 .header .top-contact li{
 	display:inline-block;
@@ -313,8 +308,10 @@ body{
 .header .logo {
 	float: left;
 	margin-top: 18px;
-	width: 40%;
+	width:40%;
 	height: auto;
+	justify-items: center;
+	align-items: center;
 }
 .header .navbar {
 	background: none;
@@ -943,7 +940,7 @@ body{
 	border-color:transparent;
 }
 .fun-facts .single-fun .content {
-	padding-left: 80px;
+	/* padding-left: 80px; */
 }
 .fun-facts .single-fun span {
 	color: #fff;
