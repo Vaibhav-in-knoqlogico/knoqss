@@ -1,80 +1,41 @@
-$(document).ready(function(){
-/*====================================
-	Google Map JS
-======================================*/ 	
-(function(){
+$(document).ready(function () {
+    /*====================================
+        Google Map with Street View and Navigation
+    ======================================*/
+    (function () {
+        // Initialize the main map
+        var map = new GMaps({
+            el: '#myMap', // Main map container
+            lat: 30.386953, // Latitude for Bhauwala, Uttarakhand
+            lng: 77.921155, // Longitude for Bhauwala, Uttarakhand
+            scrollwheel: true, // Enable mouse scroll zooming
+            zoom: 15, // Initial zoom level
+            zoomControl: true, // Enable zoom controls
+            panControl: true, // Enable panning controls
+            streetViewControl: true, // Enable Street View control
+            mapTypeControl: true, // Enable map type switching (e.g., roadmap, satellite)
+            overviewMapControl: true, // Enable mini-map
+            mapType: 'roadmap' // Set the initial map type
+        });
 
-	var map;
-	map = new GMaps({
-		el: '#myMap',
-		lat: 51.507351,
-		lng: -0.127758,
-		scrollwheel:false,
-		zoom: 15,
-		zoomControl : false,
-		panControl : false,
-		streetViewControl : true,
-		mapTypeControl: false,
-		overviewMapControl: false,
-		clickable: false
-	});
+        // Add a default marker
+        map.addMarker({
+            lat: 30.386953,
+            lng: 77.921155,
+            title: "Rana Complex, Bhauwala",
+            animation: google.maps.Animation.DROP
+        });
 
-	var image = 'img/map-marker.png';
-	map.addMarker({
-		lat: 51.507351,
-		lng: -0.127758,
-		icon: image,
-		animation: google.maps.Animation.DROP,
-		verticalAlign: 'bottom',
-		horizontalAlign: 'left',
-		backgroundColor: '#efece0',
-	});
-
-	var styles = [
-
-		{
-			"featureType": "road",
-			"stylers": [
-				{ "color": "#ffffff" }
-			]
-		},{
-			"featureType": "water",
-			"stylers": [
-				{ "color": "#bde5f6" }
-			]
-		 },{
-		  "featureType": "landscape",
-			 "stylers": [
-			 { "color": "#f2f2f2" }
-			 ]
-		},{
-			"elementType": "labels.text.fill",
-			"stylers": [
-				{ "color": "#FF7550" }
-			]
-		},{
-			"featureType": "poi",
-			"stylers": [
-			 { "color": "#e2f0cd" }
-			]
-		},{
-			"elementType": "labels.text",
-			"stylers": [
-				{ "saturation": 2 },
-				{ "weight": 0.3},
-				{ "color": "#a8a8a8" }
-			]
-		}
-
-	];
-
-	 map.addStyle({
-		styledMapName:"Styled Map",
-		styles: styles,
-		mapTypeId: "map_style"
-	});
-
-	map.setStyle("map_style");
-}());
-
+        // Initialize Street View
+        var panorama = GMaps.createPanorama({
+            el: '#streetView', // Street View container
+            lat: 30.386953,
+            lng: 77.921155,
+            pov: {
+                heading: 90, // Camera facing direction
+                pitch: 0 // Camera tilt
+            },
+            scrollwheel: true // Enable scrolling in Street View
+        });
+    })();
 });
